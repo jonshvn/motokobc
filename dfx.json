@@ -1,0 +1,35 @@
+{
+  "canisters": {
+    "HelloProject": {
+      "main": "src/HelloProject/main.mo",
+      "type": "motoko"
+    },
+    "HelloProject_assets": {
+      "dependencies": [
+        "HelloProject"
+      ],
+      "frontend": {
+        "entrypoint": "src/HelloProject_assets/src/index.html"
+      },
+      "source": [
+        "src/HelloProject_assets/assets",
+        "dist/HelloProject_assets/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "dfx": "0.8.4",
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  },
+  "version": 1
+}
